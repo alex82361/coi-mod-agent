@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="COI Mod Agent" Language="1033" Version="1.0.0.0" Manufacturer="alex82361" UpgradeCode="PUT-GUID-HERE">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+    <MajorUpgrade Version="1.0.0.0" />
+    <MediaTemplate />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="COI Mod Agent" />
+      </Directory>
+    </Directory>
+    <Component Id="MainExecutable" Guid="PUT-GUID-HERE">
+      <File Id="COIModAgent.exe" Source="path\to\COIModAgent.exe" />
+    </Component>
+    <Feature Id="ProductFeature" Title="COI Mod Agent" Level="1">
+      <ComponentRef Id="MainExecutable" />
+    </Feature>
+    <InstallExecuteSequence>
+      <RemoveExistingProducts After="InstallFinalize" />
+    </InstallExecuteSequence>
+  </Product>
+</Wix>
