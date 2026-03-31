@@ -1,0 +1,27 @@
+# C# Project Build Output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Python Environments
+*.pyc
+*.pyo
+__pycache__/
+env/
+venv/
+
+# Machine Learning Models
+*.h5
+*.pkl
+
+# IDE Files
+*.sublime-project
+*.sublime-workspace
+*.idea/
+
+# Game Mods
+*.zip
+*.rar
